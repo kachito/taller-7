@@ -2,20 +2,33 @@
 session_start();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-	<meta charset="utf-8">
-	<title>Login</title>
-	<link type="text/css" href="css/main.css"/>
+<meta charset="UTF-8">
+<title>Formulario</title>
 </head>
+
 <body>
-<header>
-</header>
-<section>
-	id=main
-</section>
+
+<?php
+
+	if (isset($_SESSION['Usuario'])){
+ 	session_destroy();
+	echo "Ha cerrado sesion<br/>";
+	echo "<a href='sesion.php'>Volver</a>";	
+	}
+	else
+ 	{ 
+	echo "Error<br/>";
+	echo "<a href='sesion.php'>Volver</a>";	
+	}
+
+?>
+
+
+
 
 </body>
 </html>

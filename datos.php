@@ -19,7 +19,7 @@ session_start();
   echo "Usuario: " . $_SESSION['Usuario'];
 ?>
 
-  <a href="index.php">Volver</a>
+  <a href="sesion.php">Volver</a>
 
 
 </body>

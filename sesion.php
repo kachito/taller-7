@@ -3,6 +3,7 @@ session_start();
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,17 +16,20 @@ session_start();
 <?php
 
 	if (isset($_SESSION['Usuario'])){
- 	session_destroy();
-	echo "Ha cerrado sesion<br/>";
-	echo "<a href='sesion.php'>Volver</a>";	
+	echo"<p>Hola usser:(" . $_SESSION['Usuario']. 	") [<a
+	href='logout.php'>Salir</a>]</p>";
 	}
 	else
  	{ 
-	echo "Error<br/>";
-	echo "<a href='sesion.php'>Volver</a>";	
-	}
-
 ?>
+
+ <form action= "datos.php" method="post">
+ <fieldset>
+ <p> Usuario </p>
+ <input type ="text" name= "Usuario"/> </br>
+ <p><button type="submit">Ingresar</button></p>
+ </form>
+<?php } ?>
 
 
 
